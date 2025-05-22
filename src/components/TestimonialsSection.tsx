@@ -8,7 +8,7 @@ const TestimonialsSection = () => {
       text: "Profissional atencioso, me ajudou a controlar a pressão com tranquilidade. O Dr. Philipe sempre explica tudo de forma clara e me sinto muito segura com o acompanhamento.",
       author: "Maria Silva",
       role: "Paciente há 2 anos",
-      avatar: "/lovable-uploads/81bf765d-eafe-4b16-8b53-fb848a81895e.png"
+      avatar: "/lovable-uploads/73933ada-8561-4f0b-b8bd-1127d85d6ab9.png"
     },
     {
       text: "Fui muito bem atendido e saí com todas as orientações necessárias. O doutor é muito dedicado e demonstra real preocupação com o bem-estar dos pacientes.",
@@ -20,7 +20,7 @@ const TestimonialsSection = () => {
       text: "Excelente médico! Me ajudou não só no tratamento, mas também na prevenção. Sinto que estou em boas mãos e minha família também tem total confiança no trabalho dele.",
       author: "Ana Oliveira",
       role: "Paciente há 3 anos",
-      avatar: "/lovable-uploads/81bf765d-eafe-4b16-8b53-fb848a81895e.png"
+      avatar: "/lovable-uploads/73933ada-8561-4f0b-b8bd-1127d85d6ab9.png"
     }
   ];
 
