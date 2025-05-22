@@ -1,5 +1,4 @@
-
-import { Shield, Zap, Smile, Users } from "lucide-react";
+import { Shield, Zap, Smile, Users, HeartPulse } from "lucide-react";
 
 const BenefitsSection = () => {
   const benefits = [
