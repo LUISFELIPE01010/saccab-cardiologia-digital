@@ -58,9 +58,7 @@ const FooterSection = () => {
             </div>
             
             <div className="mt-8 pt-8 border-t border-blue-300/30">
-              <p className="font-open-sans text-blue-200 text-sm">
-                © 2024 Dr. Philipe Saccab - Todos os direitos reservados
-              </p>
+              <p className="font-open-sans text-blue-200 text-sm">© 2025 Dr. Philipe Saccab - Todos os direitos reservados</p>
             </div>
           </div>
         </div>
