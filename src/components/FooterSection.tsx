@@ -1,18 +1,13 @@
-
 import { Button } from "@/components/ui/button";
 import { HeartPulse, MessageSquare, Instagram } from "lucide-react";
-
 const FooterSection = () => {
   const handleWhatsAppClick = () => {
     window.open('https://wa.me/551332080800', '_blank');
   };
-
   const handleInstagramClick = () => {
     window.open('https://instagram.com/drphilipecardio', '_blank');
   };
-
-  return (
-    <footer className="bg-primary-dark text-white py-16 relative overflow-hidden">
+  return <footer className="bg-primary-dark text-white py-16 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full transform translate-x-1/2 -translate-y-1/2 opacity-20"></div>
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/10 rounded-full transform -translate-x-1/3 translate-y-1/3 opacity-20"></div>
       
@@ -28,18 +23,11 @@ const FooterSection = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button 
-              onClick={handleWhatsAppClick}
-              className="bg-white hover:bg-gray-100 text-primary font-montserrat font-semibold px-8 py-4 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
-            >
+            <Button onClick={handleWhatsAppClick} className="bg-white hover:bg-gray-100 text-primary font-montserrat font-semibold px-8 py-4 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
               <MessageSquare className="h-5 w-5" />
               WhatsApp
             </Button>
-            <Button 
-              onClick={handleInstagramClick}
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-primary-dark font-montserrat font-semibold px-8 py-4 text-lg rounded-full transition-all duration-300 flex items-center gap-2"
-            >
+            <Button onClick={handleInstagramClick} variant="outline" className="border-white hover:bg-white font-montserrat font-semibold px-8 py-4 text-lg rounded-full transition-all duration-300 flex items-center gap-2 text-sky-400">
               <Instagram className="h-5 w-5" />
               Instagram
             </Button>
@@ -77,8 +65,6 @@ const FooterSection = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default FooterSection;
