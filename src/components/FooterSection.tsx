@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { HeartPulse, MessageSquare, Instagram } from "lucide-react";
 const FooterSection = () => {
@@ -27,7 +28,7 @@ const FooterSection = () => {
               <MessageSquare className="h-5 w-5" />
               WhatsApp
             </Button>
-            <Button onClick={handleInstagramClick} variant="outline" className="border-white hover:bg-white font-montserrat font-semibold px-8 py-4 text-lg rounded-full transition-all duration-300 flex items-center gap-2 text-sky-400">
+            <Button onClick={handleInstagramClick} className="bg-white hover:bg-gray-100 text-primary font-montserrat font-semibold px-8 py-4 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
               <Instagram className="h-5 w-5" />
               Instagram
             </Button>
