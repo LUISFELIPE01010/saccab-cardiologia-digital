@@ -41,25 +41,14 @@ const HeroSection = () => {
             <div className="relative">
               <div className="absolute -top-6 -left-6 w-24 h-24 bg-blue-100 rounded-full z-0"></div>
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 rounded-full z-0"></div>
-              <picture>
-                <source 
-                  media="(max-width: 768px)" 
-                  srcSet="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=300&h=300&fit=crop&crop=face&auto=format&q=80"
-                />
-                <source 
-                  media="(min-width: 769px)" 
-                  srcSet="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop&crop=face&auto=format&q=85"
-                />
-                <img 
-                  src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=350&h=350&fit=crop&crop=face&auto=format&q=80" 
-                  alt="Dr. Philipe Saccab - Cardiologista"
-                  className="w-64 h-64 md:w-80 md:h-80 rounded-2xl object-cover border-4 border-white shadow-2xl z-10 relative"
-                  loading="eager"
-                  fetchPriority="high"
-                  decoding="async"
-                  style={{ contentVisibility: 'auto' }}
-                />
-              </picture>
+              <img 
+                src="/lovable-uploads/81bf765d-eafe-4b16-8b53-fb848a81895e.png" 
+                alt="Dr. Philipe Saccab - Cardiologista"
+                className="w-64 h-64 md:w-80 md:h-80 rounded-2xl object-cover border-4 border-white shadow-2xl z-10 relative"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
+              />
             </div>
           </div>
         </div>

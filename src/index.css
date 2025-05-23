@@ -100,18 +100,10 @@
     @apply bg-background text-foreground;
   }
   
-  /* Enhanced performance optimizations for images */
+  /* Performance optimizations for images */
   img {
     content-visibility: auto;
-    contain-intrinsic-size: 350px 350px;
-    image-rendering: auto;
-  }
-  
-  /* Specific optimizations for hero image */
-  picture img {
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    perspective: 1000px;
+    contain-intrinsic-size: 300px 200px;
   }
   
   /* Optimize animations for mobile */
@@ -130,27 +122,15 @@
     }
   }
   
-  /* Enhanced mobile optimizations */
+  /* Mobile optimizations */
   @media (max-width: 768px) {
     img {
-      contain-intrinsic-size: 250px 250px;
+      contain-intrinsic-size: 200px 150px;
     }
     
     /* Reduce complexity of gradients on mobile */
     .bg-gradient-to-br {
       background: linear-gradient(135deg, var(--tw-gradient-stops));
-    }
-    
-    /* Optimize hero section for mobile */
-    picture img {
-      transform: none;
-    }
-  }
-  
-  /* Desktop optimizations */
-  @media (min-width: 1024px) {
-    img {
-      contain-intrinsic-size: 400px 400px;
     }
   }
 }
