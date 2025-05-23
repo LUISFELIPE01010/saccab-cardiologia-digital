@@ -14,7 +14,7 @@ const TestimonialsSection = () => {
       text: "Fui muito bem atendido e saí com todas as orientações necessárias. O doutor é muito dedicado e demonstra real preocupação com o bem-estar dos pacientes.",
       author: "João Santos",
       role: "Paciente",
-      avatar: "/lovable-uploads/04e03dc5-8e1f-436c-b5c5-45ffa7e4b0a8.png"
+      avatar: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=150&h=150&fit=crop&crop=face&auto=format&q=80"
     },
     {
       text: "Excelente médico! Me ajudou não só no tratamento, mas também na prevenção. Sinto que estou em boas mãos e minha família também tem total confiança no trabalho dele.",
