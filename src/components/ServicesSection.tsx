@@ -1,38 +1,48 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Stethoscope, Activity, LineChart, ClipboardCheck, HeartPulse, UserCheck } from "lucide-react";
+import { useState } from "react";
 
 const ServicesSection = () => {
+  const [openDialog, setOpenDialog] = useState<number | null>(null);
+
   const services = [
     {
       title: "Consulta Cardiológica",
       description: "Avaliação completa da saúde cardiovascular com exame clínico detalhado e orientações personalizadas.",
+      summary: "Nossa consulta cardiológica completa inclui anamnese, exame físico, avaliação de exames complementares e orientação terapêutica personalizada. Ideal para acompanhamento preventivo e tratamento de condições cardiovasculares.",
       icon: Stethoscope
     },
     {
       title: "Avaliação de Risco Cirúrgico",
       description: "Análise cardiológica especializada para procedimentos cirúrgicos, garantindo segurança e tranquilidade.",
+      summary: "Avaliação pré-operatória minuciosa para determinar o risco cardiovascular em cirurgias. Inclui análise de exames, histórico médico e recomendações específicas para sua condição, assegurando máxima segurança durante procedimentos cirúrgicos.",
       icon: ClipboardCheck
     },
     {
       title: "Controle de Hipertensão e Colesterol",
       description: "Acompanhamento especializado para controle efetivo da pressão arterial e níveis de colesterol.",
+      summary: "Programa personalizado para monitoramento e controle da pressão arterial e níveis lipídicos. Inclui ajuste medicamentoso, recomendações de estilo de vida e acompanhamento frequente para manutenção dos parâmetros ideais.",
       icon: Activity
     },
     {
       title: "Check-up Cardiológico",
       description: "Avaliação preventiva completa para detectar precocemente possíveis alterações cardiovasculares.",
+      summary: "Programa completo de avaliação cardiovascular preventiva, incluindo exames complementares, eletrocardiograma, análise de fatores de risco e orientações detalhadas para manutenção da saúde cardíaca.",
       icon: HeartPulse
     },
     {
       title: "Exames Preventivos",
       description: "Solicitação e interpretação de exames cardiológicos para prevenção e diagnóstico precoce.",
+      summary: "Solicitação e interpretação especializada de exames como eletrocardiograma, ecocardiograma, teste ergométrico e holter. Avaliação personalizada dos resultados com explicações claras e conduta adequada.",
       icon: LineChart
     },
     {
       title: "Acompanhamento Personalizado",
       description: "Seguimento contínuo e individualizado para manutenção da saúde cardiovascular.",
+      summary: "Acompanhamento contínuo e individualizado da sua saúde cardiovascular, com consultas periódicas, ajustes terapêuticos e orientações específicas para suas necessidades. Facilidade de acesso médico entre consultas para dúvidas urgentes.",
       icon: UserCheck
     }
   ];
@@ -73,13 +83,37 @@ const ServicesSection = () => {
                   <CardDescription className="text-gray-600 font-open-sans leading-relaxed">
                     {service.description}
                   </CardDescription>
-                  <Button 
-                    onClick={handleWhatsAppClick}
-                    variant="outline" 
-                    className="w-full border-primary text-primary hover:bg-primary hover:text-white font-montserrat font-medium transition-all duration-300"
-                  >
-                    Quero saber mais
-                  </Button>
+                  <Dialog open={openDialog === index} onOpenChange={(open) => setOpenDialog(open ? index : null)}>
+                    <DialogTrigger asChild>
+                      <Button 
+                        variant="outline" 
+                        className="w-full border-primary text-primary hover:bg-primary hover:text-white font-montserrat font-medium transition-all duration-300"
+                      >
+                        Quero saber mais
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-md border-0 shadow-lg">
+                      <DialogHeader>
+                        <DialogTitle className="flex items-center gap-3 text-xl font-montserrat font-semibold text-primary">
+                          <div className="p-2 bg-primary/10 rounded-lg">
+                            <Icon className="h-6 w-6 text-primary" />
+                          </div>
+                          {service.title}
+                        </DialogTitle>
+                      </DialogHeader>
+                      <DialogDescription className="text-gray-600 font-open-sans leading-relaxed py-4">
+                        {service.summary}
+                      </DialogDescription>
+                      <DialogFooter>
+                        <Button 
+                          onClick={handleWhatsAppClick}
+                          className="w-full bg-primary hover:bg-primary/90 text-white font-montserrat font-medium rounded-full px-8 py-6 h-auto shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+                        >
+                          Agendar Consulta pelo WhatsApp
+                        </Button>
+                      </DialogFooter>
+                    </DialogContent>
+                  </Dialog>
                 </CardContent>
               </Card>
             );
