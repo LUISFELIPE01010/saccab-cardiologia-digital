@@ -14,7 +14,7 @@ const TestimonialsSection = () => {
       text: "Fui muito bem atendido e saí com todas as orientações necessárias. O doutor é muito dedicado e demonstra real preocupação com o bem-estar dos pacientes.",
       author: "João Santos",
       role: "Paciente",
-      avatar: "/lovable-uploads/671d0dc9-850b-4140-b9a5-08b79637c40c.png"
+      avatar: "/lovable-uploads/04e03dc5-8e1f-436c-b5c5-45ffa7e4b0a8.png"
     },
     {
       text: "Excelente médico! Me ajudou não só no tratamento, mas também na prevenção. Sinto que estou em boas mãos e minha família também tem total confiança no trabalho dele.",
@@ -62,6 +62,8 @@ const TestimonialsSection = () => {
                       src={testimonial.avatar} 
                       alt={testimonial.author}
                       className="w-full h-full object-cover"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <div>

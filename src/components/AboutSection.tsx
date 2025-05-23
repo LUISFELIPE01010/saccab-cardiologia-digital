@@ -13,6 +13,8 @@ const AboutSection = () => {
                 src="/lovable-uploads/97899204-f19e-43ed-b0f5-1870c773ee22.png" 
                 alt="Dr. Philipe Saccab - Perfil Profissional"
                 className="w-full max-w-md mx-auto rounded-2xl shadow-2xl relative z-10"
+                loading="lazy"
+                decoding="async"
               />
               
               <div className="grid grid-cols-3 gap-4 mt-6">

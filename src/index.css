@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -97,5 +98,39 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+  
+  /* Performance optimizations for images */
+  img {
+    content-visibility: auto;
+    contain-intrinsic-size: 300px 200px;
+  }
+  
+  /* Optimize animations for mobile */
+  @media (prefers-reduced-motion: no-preference) {
+    .animate-fade-in,
+    .animate-scale-in {
+      will-change: transform, opacity;
+    }
+  }
+  
+  /* Reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-fade-in,
+    .animate-scale-in {
+      animation: none;
+    }
+  }
+  
+  /* Mobile optimizations */
+  @media (max-width: 768px) {
+    img {
+      contain-intrinsic-size: 200px 150px;
+    }
+    
+    /* Reduce complexity of gradients on mobile */
+    .bg-gradient-to-br {
+      background: linear-gradient(135deg, var(--tw-gradient-stops));
+    }
   }
 }

@@ -45,6 +45,9 @@ const HeroSection = () => {
                 src="/lovable-uploads/81bf765d-eafe-4b16-8b53-fb848a81895e.png" 
                 alt="Dr. Philipe Saccab - Cardiologista"
                 className="w-64 h-64 md:w-80 md:h-80 rounded-2xl object-cover border-4 border-white shadow-2xl z-10 relative"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
               />
             </div>
           </div>
